@@ -3,7 +3,32 @@
         "place1": {
             "position": "",
             "resourceType": "",
-            "locationName": ""
+            "locationName": "",
+            "zipCode": ""
+        },
+        "place2": {
+            "position": "",
+            "resourceType": "",
+            "locationName": "",
+            "zipCode": ""
+        },
+        "place3": {
+            "position": "",
+            "resourceType": "",
+            "locationName": "",
+            "zipCode": ""
+        },
+        "place4": {
+            "position": "",
+            "resourceType": "",
+            "locationName": "",
+            "zipCode": ""
+        },
+        "place1": {
+            "position": "",
+            "resourceType": "",
+            "locationName": "",
+            "zipCode": ""
         }
     },
 

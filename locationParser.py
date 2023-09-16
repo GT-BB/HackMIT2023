@@ -25,17 +25,14 @@ class Parser():
 
         data = None
         finalValue = None
-        print (isThreat)
 
         if (isThreat):
             data = self.jsonContent["threats"]
 
-            print (data)
             keysList = list(data.keys())
             finalKey = keysList[-1]
             finalValue = int(finalKey[6:])
             finalValue += 1
-            print (finalValue)
             data["threat" + str(finalValue)] = {
                                                   "position": position,
                                                   "threatType": newType,
@@ -69,6 +66,29 @@ class ZipCodeParser(Parser):
     def __init__(self, location=None):
 
         super.__init__(location)
+
+    def getData(self, zipCode):
+
+        data = self.jsonContent
+        resource = data["resources"]
+
+        defaultName = "resource"
+        index = 0
+        returnDict = {}
+
+        for key in resource:
+
+            finalName = defaultName + str(index)
+
+            placeLocation = resource[key]
+            dictZipCode = placeLocation["zipCode"]
+
+            if (zipCode == dictZipCode):
+                returnDict[finalName] = placeLocation
+
+            index += 1
+
+        return returnDict
 
 class CoordinateParser(Parser):
 
