@@ -1,0 +1,322 @@
+{
+    "ARC of Maui": {
+        "type": "water",
+        "name": "ARC of Maui",
+        "zip code": "96793"
+    },
+    "Calvary Chapel Central Maui": {
+        "type": "water",
+        "name": "Calvary Chapel Central Maui",
+        "zip code": "96793"
+    },
+    "Compassion in Action (Faith in Jesus Church)": {
+        "type": "water",
+        "name": "Compassion in Action (Faith in Jesus Church)",
+        "zip code": "96793"
+    },
+    "Christ the King Church Maui": {
+        "type": "water",
+        "name": "Christ the King Church Maui",
+        "zip code": "96732"
+    },
+    "In His House of Restoration": {
+        "type": "water",
+        "name": "In His House of Restoration",
+        "zip code": "96732"
+    },
+    "Kahului Baptist Church": {
+        "type": "water",
+        "name": "Kahului Baptist Church",
+        "zip code": "96732"
+    },
+    "St. John Episcopal Church": {
+        "type": "water",
+        "name": "St. John Episcopal Church",
+        "zip code": "96790"
+    },
+    "Waipuna Chapel Outreach": {
+        "type": "water",
+        "name": "Waipuna Chapel Outreach",
+        "zip code": "96790"
+    },
+    "Hope Chapel North Shore": {
+        "type": "water",
+        "name": "Hope Chapel North Shore",
+        "zip code": "96708"
+    },
+    "Youth With A Mission": {
+        "type": "water",
+        "name": "Youth With A Mission",
+        "zip code": "96708"
+    },
+    "Hale Hulu Mamo": {
+        "type": "water",
+        "name": "Hale Hulu Mamo",
+        "zip code": "96713"
+    },
+    "Ohana Makamae": {
+        "type": "water",
+        "name": "Ohana Makamae",
+        "zip code": "96713"
+    },
+    "Calvary Chapel South Maui Pantry": {
+        "type": "water",
+        "name": "Calvary Chapel South Maui Pantry",
+        "zip code": "96753"
+    },
+    "Hale Kau Kau": {
+        "type": "water",
+        "name": "Hale Kau Kau",
+        "zip code": "96753"
+    },
+    "Keolahou Church": {
+        "type": "water",
+        "name": "Keolahou Church",
+        "zip code": "96753"
+    },
+    "Grace Episcopal Church Pantry": {
+        "type": "water",
+        "name": "Grace Episcopal Church Pantry",
+        "zip code": "96753"
+    },
+    "Citizen Church": {
+        "type": "water",
+        "name": "Citizen Church",
+        "zip code": "96761"
+    },
+    "Maui Economic Opportunity (MEO) Lanai": {
+        "type": "water",
+        "name": "Maui Economic Opportunity (MEO) Lanai",
+        "zip code": "96761"
+    },
+    "Waihe'e Protestant Church": {
+        "type": "water",
+        "name": "Waihe'e Protestant Church",
+        "zip code": "96761"
+    },
+    "Maui Ministry on the Move ": {
+        "type": "water",
+        "name": "Maui Ministry on the Move ",
+        "zip code": "96761"
+    },
+    "King's Chapel Pantry": {
+        "type": "water",
+        "name": "King's Chapel Pantry",
+        "zip code": "96732"
+    },
+    "Molokai Baptist Church": {
+        "type": "water",
+        "name": "Molokai Baptist Church",
+        "zip code": "96729"
+    },
+    "Maui Economic Opportunity (MEO) Molokai": {
+        "type": "water",
+        "name": "Maui Economic Opportunity (MEO) Molokai",
+        "zip code": "96748"
+    },
+    "Molokai Community Health Center": {
+        "type": "water",
+        "name": "Molokai Community Health Center",
+        "zip code": "96748"
+    },
+    "St. Damien of Molokai Parish": {
+        "type": "water",
+        "name": "St. Damien of Molokai Parish",
+        "zip code": "96748"
+    },
+    "Salvation Army Homeless Outreach": {
+        "type": "water",
+        "name": "Salvation Army Homeless Outreach",
+        "zip code": "96731"
+    },
+    "Grace Church": {
+        "type": "water",
+        "name": "Grace Church",
+        "zip code": "96768"
+    },
+    "LDS Pukalani/Makawao Ward": {
+        "type": "water",
+        "name": "LDS Pukalani/Makawao Ward",
+        "zip code": "96768"
+    },
+    "St. Joseph Church": {
+        "type": "water",
+        "name": "St. Joseph Church",
+        "zip code": "96768"
+    },
+    "Kahale A Ke Ola Resource Center - Wailuku": {
+        "type": "shelter",
+        "name": "Kahale A Ke Ola Resource Center - Wailuku",
+        "zip code": "96793"
+    },
+    "Kahale A Ke Ola Resource Center - Lahaina": {
+        "type": "shelter",
+        "name": "Kahale A Ke Ola Resource Center - Lahaina",
+        "zip code": "96793"
+    },
+    "Women Helping Women": {
+        "type": "shelter",
+        "name": "Women Helping Women",
+        "zip code": "96793"
+    },
+    "Ho'olanani": {
+        "type": "shelter",
+        "name": "Ho'olanani",
+        "zip code": "96732"
+    },
+    "Malama Family Recovery Center": {
+        "type": "shelter",
+        "name": "Malama Family Recovery Center",
+        "zip code": "96732"
+    },
+    "Kula Hospital": {
+        "type": "medicine",
+        "name": "Kula Hospital",
+        "zip code": "96790"
+    },
+    "The Pulehu Chapel": {
+        "type": "shelter",
+        "name": "The Pulehu Chapel",
+        "zip code": "96790"
+    },
+    "Kula Hardware and Nursery": {
+        "type": "shelter",
+        "name": "Kula Hardware and Nursery",
+        "zip code": "96790"
+    },
+    "Bamboo Valley Inn": {
+        "type": "shelter",
+        "name": "Bamboo Valley Inn",
+        "zip code": "96708"
+    },
+    "Adventure in Paradise": {
+        "type": "shelter",
+        "name": "Adventure in Paradise",
+        "zip code": "96708"
+    },
+    "Holomakai Northshore B and B": {
+        "type": "medicine",
+        "name": "Holomakai Northshore B and B",
+        "zip code": "96708"
+    },
+    "Hana Paradise Cottages": {
+        "type": "shelter",
+        "name": "Hana Paradise Cottages",
+        "zip code": "96713"
+    },
+    "Huialoha Church": {
+        "type": "medicine",
+        "name": "Huialoha Church",
+        "zip code": "96713"
+    },
+    "Koali Ranch Cottage": {
+        "type": "shelter",
+        "name": "Koali Ranch Cottage",
+        "zip code": "96713"
+    },
+    "Ho'olei at Grand Wailea": {
+        "type": "medicine",
+        "name": "Ho'olei at Grand Wailea",
+        "zip code": "96753"
+    },
+    "Safeway": {
+        "type": "shelter",
+        "name": "Safeway",
+        "zip code": "96753"
+    },
+    "Sugar Beach Resort": {
+        "type": "shelter",
+        "name": "Sugar Beach Resort",
+        "zip code": "96753"
+    },
+    "Hale Ono Loa ": {
+        "type": "shelter",
+        "name": "Hale Ono Loa ",
+        "zip code": "96761"
+    },
+    "The Gardens at West Maui": {
+        "type": "shelter",
+        "name": "The Gardens at West Maui",
+        "zip code": "96761"
+    },
+    "Kahana Villa ": {
+        "type": "shelter",
+        "name": "Kahana Villa ",
+        "zip code": "96761"
+    },
+    "Molokai Arts Center": {
+        "type": "shelter",
+        "name": "Molokai Arts Center",
+        "zip code": "96729"
+    },
+    "Kualapuu Recreational Center": {
+        "type": "medicine",
+        "name": "Kualapuu Recreational Center",
+        "zip code": "96729"
+    },
+    "Molokai Museum and Cultural Center": {
+        "type": "shelter",
+        "name": "Molokai Museum and Cultural Center",
+        "zip code": "96729"
+    },
+    "Molokai General Hospital": {
+        "type": "medicine",
+        "name": "Molokai General Hospital",
+        "zip code": "96748"
+    },
+    "Moloka'i Shores": {
+        "type": "shelter",
+        "name": "Moloka'i Shores",
+        "zip code": "96748"
+    },
+    "Hotel Moloka'i": {
+        "type": "shelter",
+        "name": "Hotel Moloka'i",
+        "zip code": "96748"
+    },
+    "Church of Jesus Christ of Latter Day Saints": {
+        "type": "medicine",
+        "name": "Church of Jesus Christ of Latter Day Saints",
+        "zip code": "96731"
+    },
+    "Kahuku High and Intermediate School": {
+        "type": "shelter",
+        "name": "Kahuku High and Intermediate School",
+        "zip code": "96731"
+    },
+    "Kahuku Police Station": {
+        "type": "shelter",
+        "name": "Kahuku Police Station",
+        "zip code": "96731"
+    },
+    "Kamehameha Middle School": {
+        "type": "shelter",
+        "name": "Kamehameha Middle School",
+        "zip code": "96768"
+    },
+    "Kamehameha Elementary School": {
+        "type": "medicine",
+        "name": "Kamehameha Elementary School",
+        "zip code": "96768"
+    },
+    "Pulukani Community Church of the Nazarene": {
+        "type": "shelter",
+        "name": "Pulukani Community Church of the Nazarene",
+        "zip code": "96768"
+    },
+    "FEMA Support": {
+        "type": "medicine",
+        "name": "FEMA Support",
+        "zip code": "96793"
+    },
+    "Walgreens": {
+        "type": "medicine",
+        "name": "Walgreens",
+        "zip code": "96732"
+    },
+    "Lahaina Civic Center": {
+        "type": "medicine",
+        "name": "Lahaina Civic Center",
+        "zip code": "96761"
+    }
+}
