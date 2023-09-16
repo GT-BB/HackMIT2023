@@ -3,32 +3,32 @@
         "place1": {
             "position": "",
             "resourceType": "",
-            "locationName": "",
-            "zipCode": ""
+            "locationName": "AAAAAA",
+            "zipCode": "10665"
         },
         "place2": {
             "position": "",
             "resourceType": "",
-            "locationName": "",
-            "zipCode": ""
+            "locationName": "BBBBB",
+            "zipCode": "21212"
         },
         "place3": {
             "position": "",
             "resourceType": "",
-            "locationName": "",
-            "zipCode": ""
+            "locationName": "CCCCC",
+            "zipCode": "10665"
         },
         "place4": {
             "position": "",
             "resourceType": "",
-            "locationName": "",
-            "zipCode": ""
+            "locationName": "DDDDD",
+            "zipCode": "21211"
         },
-        "place1": {
+        "place5": {
             "position": "",
             "resourceType": "",
-            "locationName": "",
-            "zipCode": ""
+            "locationName": "EEEEE",
+            "zipCode": "21212"
         }
     },
 

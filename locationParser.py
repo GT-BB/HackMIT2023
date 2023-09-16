@@ -1,5 +1,6 @@
 import json
 import googlemaps
+import math
 
 class Parser():
 
@@ -30,8 +31,7 @@ class Parser():
             data = self.jsonContent["threats"]
 
             keysList = list(data.keys())
-            finalKey = keysList[-1]
-            finalValue = int(finalKey[6:])
+            finalValue = int(keysList[-1])
             finalValue += 1
             data["threat" + str(finalValue)] = {
                                                   "position": position,
@@ -44,8 +44,7 @@ class Parser():
         else:
             data = self.jsonContent["resources"]
             keysList = list(data.keys())
-            finalKey = keysList[-1]
-            finalValue = int(finalKey[5:])
+            finalValue = int(keysList[-1])
             finalValue += 1
 
             data["threat" + str(finalValue)] = {
@@ -61,13 +60,16 @@ class Parser():
         json.dump(self.jsonContent, self.file, indent=4)
         self.file.close()
 
+    def getJSONData(self):
+        return self.jsonContent
+
 class ZipCodeParser(Parser):
 
     def __init__(self, location=None):
 
         super.__init__(location)
 
-    def getData(self, zipCode):
+    def getData(self, zipCode, resourceType):
 
         data = self.jsonContent
         resource = data["resources"]
@@ -82,8 +84,9 @@ class ZipCodeParser(Parser):
 
             placeLocation = resource[key]
             dictZipCode = placeLocation["zipCode"]
+            resource = placeLocation["resourceType"]
 
-            if (zipCode == dictZipCode):
+            if (zipCode == dictZipCode and resource == resourceType):
                 returnDict[finalName] = placeLocation
 
             index += 1
@@ -96,7 +99,35 @@ class CoordinateParser(Parser):
 
         super.__init__(location)
 
+    def getDistanceAlongRoads(self):
 
+        data = self.getJSONData()
+
+
+
+
+    def haverSineDistanceCorrection(self, origin, destination):
+        # Radius of the Earth in kilometers
+        R = 6371.0
+
+        # Convert latitude and longitude from degrees to radians
+        lat1 = math.radians(origin[0])
+        lon1 = math.radians(origin[1])
+        lat2 = math.radians(destination[0])
+        lon2 = math.radians(destination[1])
+
+        # Differences between coordinates
+        dlat = lat2 - lat1
+        dlon = lon2 - lon1
+
+        # Haversine formula
+        a = math.sin(dlat / 2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2)**2
+        c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
+        # Calculate the distance
+        distance = R * c
+
+        return distance
 
 
 
