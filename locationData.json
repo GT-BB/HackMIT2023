@@ -1,0 +1,22 @@
+{
+    "resources": {
+        "place1": {
+            "position": "",
+            "resourceType": "",
+            "locationName": ""
+        }
+    },
+
+    "threats": {
+        "threat1": {
+            "position": "",
+            "threatType": "",
+            "threatName": ""
+        },
+        "threat2": {
+            "position": 23,
+            "threatType": "dsb",
+            "locationName": "asds"
+        }
+    }
+}
