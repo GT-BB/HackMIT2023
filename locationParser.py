@@ -2,6 +2,10 @@ import json
 import googlemaps
 import math
 import re
+import geopandas
+from geopandas.geoseries import *
+from shapely import Point, Polygon, LineString
+from shapely.ops import transform
 
 """
 
@@ -112,7 +116,10 @@ class CoordinateParser(Parser):
     def __init__(self, location=None, truth=False):
 
         super().__init__(location)
+
         self.truthMode = truth
+        self.hazardCircles = []
+        self.routes = {}
 
     def getDirections(self, resourceType):
 
@@ -123,20 +130,31 @@ class CoordinateParser(Parser):
         else:
             directionResult = self.getClosestLocation(resourceType)
 
+        actualDirection = directionResult[0]
+        hazard = directionResult[1]
+        address = directionResult[2]
+
         steps = []
-        for step in directionResult[0]["legs"][0]["steps"]:
+        length = len(actualDirection[0]["legs"][0]["steps"]) - 1
+        index = 0
+        for step in actualDirection[0]["legs"][0]["steps"]:
             line = step["html_instructions"]
             distance_value = step["distance"]["value"]
             output_string = re.sub(r'<[^>]*>', '', line)
             result = re.sub(r'([a-z])([A-Z])', r'\1 \2', output_string)
-            steps.append(result + ": " + str(round(distance_value/5280, 2)) + " miles.")
 
-        return steps
+            if (index != length):
+                steps.append(result + ": " + str(round(distance_value/5280, 2)) + " miles.")
+            else:
+                steps.append(result + " ({}): ".format(address) + str(round(distance_value/5280, 2)) + " miles.")
+
+            index += 1
+
+        return [steps, hazard]
 
     """
         {"resources", "id, position, resouceType"}
     """
-
 
     def getClosestLocation(self, resourceType):
 
@@ -144,8 +162,21 @@ class CoordinateParser(Parser):
         data = wild["resources"]
         hazards = wild["hazards"]
 
-        distanceLocations = []
-        distanceValues = []
+        for keys in hazards:
+            specificHarzardData = hazards[keys]
+            center = specificHarzardData["center"]
+            radius = specificHarzardData["radius"]
+            print (center)
+            print (radius)
+
+            circle = Point(center).buffer(radius, resolution=32)
+            self.hazardCircles.append(circle)
+
+        hazard = self.hazardCircles[0]
+        print(type(hazard))
+        print ("area: " + str(hazard.area))
+
+        routes = {}
 
         index = 0
         specializedData = {}
@@ -166,24 +197,97 @@ class CoordinateParser(Parser):
                 self.currentLocation,
                 coords,
                 mode="walking",
-                units="imperial"
+                units="imperial",
+                alternatives=True
             )
 
             if distanceResult == []:
                 continue
 
-            distanceValue = int(distanceResult[0]['legs'][0]['distance']['value'])
+            #print(type(distanceResult))
+            #print(len(distanceResult))
 
-            distanceLocations.append(distanceResult)
-            distanceValues.append(distanceValue)
+            for i in range(len(distanceResult)):
+                partRoute = distanceResult[i]
+                distanceValue = self.distanceToTravel(partRoute)
+                routes[distanceValue] = distanceResult
 
-        closestDistanceIndex = distanceValues.index(min(distanceValues))
-        closestRoute = distanceLocations[closestDistanceIndex]
+        routePlusHazard = self.filterHazards(routes)
 
+        return routePlusHazard
 
-        #print (distanceValues)
+    def distanceToTravel(self, passedRoute):
+        return int(passedRoute['legs'][0]['distance']['value'])
 
-        return closestRoute
+    def distanceToTravel2(self, passedRoute):
+        return int(passedRoute[0]['legs'][0]['distance']['value'])
+
+    def filterHazards(self, routeDict):
+
+        keys = list(routeDict.keys())
+        keys.sort()
+        sortedRoutes = {i: routeDict[i] for i in keys}
+        blockedRoute = None
+        print(len(keys))
+        count = 0
+
+        finalRoutes = {}
+
+        for sortedKey in sortedRoutes:
+            route = sortedRoutes[sortedKey]
+
+            coordinates = []
+            conflict = False
+            path = None
+
+            for step in route[0]["legs"][0]["steps"]:
+                start_location = step['start_location']
+                end_location = step['end_location']
+
+                # Extract latitude and longitude
+                start_lat = start_location['lat']
+                start_lng = start_location['lng']
+                end_lat = end_location['lat']
+                end_lng = end_location['lng']
+
+                coordinates.append((start_lat, start_lng))
+                coordinates.append((end_lat, end_lng))
+
+            path = LineString(coordinates)
+
+            for harzard in self.hazardCircles:
+
+                if (path.within(harzard)):
+                    conflict = True
+                    blockedRoute = harzard
+                    count += 1
+
+                if (conflict == False):
+                    distance = self.distanceToTravel2(route)
+                    print (distance)
+                    finalRoutes[distance] = route
+
+        print (count)
+        keys = list(finalRoutes.keys())
+        keys.sort()
+        bestRoute = finalRoutes[keys[0]]
+        bestAddress = bestRoute[0]['legs'][0]['end_address']
+        actualHazard = self.matchUpHazard(blockedRoute)
+        return [bestRoute, actualHazard, bestAddress]
+
+    def matchUpHazard(self, selectedHazard):
+
+        data = self.getJSONData()
+        hazards = data["hazards"]
+
+        for key in hazards:
+            hazardSpecificData = hazards[key]
+            coords = hazardSpecificData["center"]
+
+            testPoint = Point(coords[0], coords[1])
+
+            if (testPoint.within(selectedHazard)):
+                return hazards[key]
 
     def falseGetDirections(self):
 
@@ -224,11 +328,8 @@ UNTIL YOU GUYS START DEMOING USE FALSE MODE ON THE COORDINATE PARSER
 
 """
 
-blue = CoordinateParser((20.841327942643264, -156.51442769100743), True)
+blue = CoordinateParser((20.846895275708786, -156.5055077097432), True)
 print(blue.getDirections("food"))
-
-
-
 
 
 
