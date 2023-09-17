@@ -64,6 +64,10 @@ def sms():
     number = request.form['From']
     message_body = request.form['Body']
 
+    message_body = message_body.replace(",", "")
+    message_body = message_body.replace("(", "")
+    message_body = message_body.replace(")", "")
+
     message_tokens = message_body.split()
     zip_code = None
     directions = False
@@ -92,7 +96,6 @@ def sms():
         return
 
     if directions:
-        # coords = message_body.split(", ", 2)[:2]
         coords = (float(message_tokens[0]), float(message_tokens[1]))
 
         get_directions(coords, number, resources[0])
