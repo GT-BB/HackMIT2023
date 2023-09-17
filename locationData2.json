@@ -1,0 +1,1134 @@
+{
+    "resources": {
+        "0": {
+            "id": "0",
+            "position": [
+                20.8899619,
+                -156.5026247
+            ],
+            "resourceType": "food",
+            "locationName": "ARC of Maui",
+            "zipCode": "96793",
+            "distance": 8441
+        },
+        "1": {
+            "id": "1",
+            "position": [
+                20.8879569,
+                -156.5023327
+            ],
+            "resourceType": "food",
+            "locationName": "Calvary Chapel Central Maui",
+            "zipCode": "96793",
+            "distance": 8471
+        },
+        "2": {
+            "id": "2",
+            "position": [
+                20.9062678,
+                -156.485657
+            ],
+            "resourceType": "food",
+            "locationName": "Compassion in Action (Faith in Jesus Church)",
+            "zipCode": "96793",
+            "distance": 11234
+        },
+        "3": {
+            "id": "3",
+            "position": [
+                20.8850399,
+                -156.4650489
+            ],
+            "resourceType": "food",
+            "locationName": "Christ the King Church Maui",
+            "zipCode": "96732",
+            "distance": 12802
+        },
+        "4": {
+            "id": "4",
+            "position": [
+                20.8669969,
+                -156.4980695
+            ],
+            "resourceType": "food",
+            "locationName": "In His House of Restoration",
+            "zipCode": "96732",
+            "distance": 7153
+        },
+        "5": {
+            "id": "5",
+            "position": [
+                20.883364,
+                -156.4631891
+            ],
+            "resourceType": "food",
+            "locationName": "Kahului Baptist Church",
+            "zipCode": "96732",
+            "distance": 12543
+        },
+        "6": {
+            "id": "6",
+            "position": [
+                20.7075066,
+                -156.3543002
+            ],
+            "resourceType": "food",
+            "locationName": "St. John Episcopal Church",
+            "zipCode": "96790",
+            "distance": 42934
+        },
+        "7": {
+            "id": "7",
+            "position": [
+                20.7969529,
+                -156.3264392
+            ],
+            "resourceType": "food",
+            "locationName": "Waipuna Chapel Outreach",
+            "zipCode": "96790",
+            "distance": 32090
+        },
+        "8": {
+            "id": "8",
+            "position": [
+                20.905776,
+                -156.3225107
+            ],
+            "resourceType": "food",
+            "locationName": "Hope Chapel North Shore",
+            "zipCode": "96708",
+            "distance": 34401
+        },
+        "9": {
+            "id": "9",
+            "position": [
+                20.9204832,
+                -156.3079357
+            ],
+            "resourceType": "food",
+            "locationName": "Youth With A Mission",
+            "zipCode": "96708",
+            "distance": 32477
+        },
+        "10": {
+            "id": "10",
+            "position": [
+                20.6930814,
+                -156.0701449
+            ],
+            "resourceType": "food",
+            "locationName": "Hale Hulu Mamo",
+            "zipCode": "96713",
+            "distance": 98042
+        },
+        "11": {
+            "id": "11",
+            "position": [
+                20.756306,
+                -155.9870512
+            ],
+            "resourceType": "food",
+            "locationName": "Ohana Makamae",
+            "zipCode": "96713",
+            "distance": 92786
+        },
+        "12": {
+            "id": "12",
+            "position": [
+                20.773887,
+                -156.450867
+            ],
+            "resourceType": "food",
+            "locationName": "Calvary Chapel South Maui Pantry",
+            "zipCode": "96753",
+            "distance": 11531
+        },
+        "13": {
+            "id": "13",
+            "position": [
+                20.7469521,
+                -156.4554877
+            ],
+            "resourceType": "food",
+            "locationName": "Hale Kau Kau",
+            "zipCode": "96753",
+            "distance": 13746
+        },
+        "14": {
+            "id": "14",
+            "position": [
+                20.7790423,
+                -156.4609135
+            ],
+            "resourceType": "food",
+            "locationName": "Keolahou Church",
+            "zipCode": "96753",
+            "distance": 10132
+        },
+        "15": {
+            "id": "15",
+            "position": [
+                20.7132237,
+                -156.4390541
+            ],
+            "resourceType": "food",
+            "locationName": "Grace Episcopal Church Pantry",
+            "zipCode": "96753",
+            "distance": 18764
+        },
+        "16": {
+            "id": "16",
+            "position": [
+                20.9683723,
+                -156.6772461
+            ],
+            "resourceType": "food",
+            "locationName": "Citizen Church",
+            "zipCode": "96761",
+            "distance": 41332
+        },
+        "17": {
+            "id": "17",
+            "position": [
+                20.8165975,
+                -156.9273193
+            ],
+            "resourceType": "food",
+            "locationName": "Maui Economic Opportunity (MEO) Lanai",
+            "zipCode": "96761",
+            "distance": 19968
+        },
+        "18": {
+            "id": "18",
+            "position": [
+                20.9529323,
+                -156.5316222
+            ],
+            "resourceType": "food",
+            "locationName": "Waihe'e Protestant Church",
+            "zipCode": "96761",
+            "distance": 40442
+        },
+        "19": {
+            "id": "19",
+            "position": [
+                20.9266625,
+                -156.6771873
+            ],
+            "resourceType": "food",
+            "locationName": "Maui Ministry on the Move ",
+            "zipCode": "96761",
+            "distance": 30497
+        },
+        "20": {
+            "id": "20",
+            "position": [
+                20.8776318,
+                -156.6762686
+            ],
+            "resourceType": "food",
+            "locationName": "King's Chapel Pantry",
+            "zipCode": "96732",
+            "distance": 32600
+        },
+        "21": {
+            "id": "21",
+            "position": [
+                21.1636736,
+                -157.0704484
+            ],
+            "resourceType": "food",
+            "locationName": "Molokai Baptist Church",
+            "zipCode": "96729",
+            "distance": 29418
+        },
+        "22": {
+            "id": "22",
+            "position": [
+                21.0886472,
+                -157.0127412
+            ],
+            "resourceType": "food",
+            "locationName": "Maui Economic Opportunity (MEO) Molokai",
+            "zipCode": "96748",
+            "distance": 26807
+        },
+        "23": {
+            "id": "23",
+            "position": [
+                21.0860191,
+                -157.0192094
+            ],
+            "resourceType": "food",
+            "locationName": "Molokai Community Health Center",
+            "zipCode": "96748",
+            "distance": 30639
+        },
+        "24": {
+            "id": "24",
+            "position": [
+                21.0911111,
+                -157.02
+            ],
+            "resourceType": "food",
+            "locationName": "St. Damien of Molokai Parish",
+            "zipCode": "96748",
+            "distance": 8441
+        },
+        "25": {
+            "id": "25",
+            "position": [
+                20.7983626,
+                -156.3319253
+            ],
+            "resourceType": "food",
+            "locationName": "Salvation Army Homeless Outreach",
+            "zipCode": "96731",
+            "distance": 8471
+        },
+        "26": {
+            "id": "26",
+            "position": [
+                20.821339,
+                -156.329367
+            ],
+            "resourceType": "food",
+            "locationName": "Grace Church",
+            "zipCode": "96768",
+            "distance": 11234
+        },
+        "27": {
+            "id": "27",
+            "position": [
+                20.8367885,
+                -156.3442753
+            ],
+            "resourceType": "food",
+            "locationName": "LDS Pukalani/Makawao Ward",
+            "zipCode": "96768",
+            "distance": 12802
+        },
+        "28": {
+            "id": "28",
+            "position": [
+                20.8558692,
+                -156.3086499
+            ],
+            "resourceType": "food",
+            "locationName": "St. Joseph Church",
+            "zipCode": "96768",
+            "distance": 7153
+        },
+        "29": {
+            "id": "29",
+            "position": [
+                20.8899619,
+                -156.5026247
+            ],
+            "resourceType": "water",
+            "locationName": "ARC of Maui",
+            "zipCode": "96793",
+            "distance": 12543
+        },
+        "30": {
+            "id": "30",
+            "position": [
+                20.8879569,
+                -156.5023327
+            ],
+            "resourceType": "water",
+            "locationName": "Calvary Chapel Central Maui",
+            "zipCode": "96793",
+            "distance": 42934
+        },
+        "31": {
+            "id": "31",
+            "position": [
+                20.9062678,
+                -156.485657
+            ],
+            "resourceType": "water",
+            "locationName": "Compassion in Action (Faith in Jesus Church)",
+            "zipCode": "96793",
+            "distance": 32090
+        },
+        "32": {
+            "id": "32",
+            "position": [
+                20.8850399,
+                -156.4650489
+            ],
+            "resourceType": "water",
+            "locationName": "Christ the King Church Maui",
+            "zipCode": "96732",
+            "distance": 34401
+        },
+        "33": {
+            "id": "33",
+            "position": [
+                20.8669969,
+                -156.4980695
+            ],
+            "resourceType": "water",
+            "locationName": "In His House of Restoration",
+            "zipCode": "96732",
+            "distance": 32477
+        },
+        "34": {
+            "id": "34",
+            "position": [
+                20.883364,
+                -156.4631891
+            ],
+            "resourceType": "water",
+            "locationName": "Kahului Baptist Church",
+            "zipCode": "96732",
+            "distance": 98042
+        },
+        "35": {
+            "id": "35",
+            "position": [
+                20.7075066,
+                -156.3543002
+            ],
+            "resourceType": "water",
+            "locationName": "St. John Episcopal Church",
+            "zipCode": "96790",
+            "distance": 92786
+        },
+        "36": {
+            "id": "36",
+            "position": [
+                20.7969529,
+                -156.3264392
+            ],
+            "resourceType": "water",
+            "locationName": "Waipuna Chapel Outreach",
+            "zipCode": "96790",
+            "distance": 11531
+        },
+        "37": {
+            "id": "37",
+            "position": [
+                20.905776,
+                -156.3225107
+            ],
+            "resourceType": "water",
+            "locationName": "Hope Chapel North Shore",
+            "zipCode": "96708",
+            "distance": 13746
+        },
+        "38": {
+            "id": "38",
+            "position": [
+                20.9204832,
+                -156.3079357
+            ],
+            "resourceType": "water",
+            "locationName": "Youth With A Mission",
+            "zipCode": "96708",
+            "distance": 10132
+        },
+        "39": {
+            "id": "39",
+            "position": [
+                20.6930814,
+                -156.0701449
+            ],
+            "resourceType": "water",
+            "locationName": "Hale Hulu Mamo",
+            "zipCode": "96713",
+            "distance": 18764
+        },
+        "40": {
+            "id": "40",
+            "position": [
+                20.756306,
+                -155.9870512
+            ],
+            "resourceType": "water",
+            "locationName": "Ohana Makamae",
+            "zipCode": "96713",
+            "distance": 41332
+        },
+        "41": {
+            "id": "41",
+            "position": [
+                20.773887,
+                -156.450867
+            ],
+            "resourceType": "water",
+            "locationName": "Calvary Chapel South Maui Pantry",
+            "zipCode": "96753",
+            "distance": 19968
+        },
+        "42": {
+            "id": "42",
+            "position": [
+                20.7469521,
+                -156.4554877
+            ],
+            "resourceType": "water",
+            "locationName": "Hale Kau Kau",
+            "zipCode": "96753",
+            "distance": 40442
+        },
+        "43": {
+            "id": "43",
+            "position": [
+                20.7790423,
+                -156.4609135
+            ],
+            "resourceType": "water",
+            "locationName": "Keolahou Church",
+            "zipCode": "96753",
+            "distance": 30497
+        },
+        "44": {
+            "id": "44",
+            "position": [
+                20.7132237,
+                -156.4390541
+            ],
+            "resourceType": "water",
+            "locationName": "Grace Episcopal Church Pantry",
+            "zipCode": "96753",
+            "distance": 32600
+        },
+        "45": {
+            "id": "45",
+            "position": [
+                20.9683723,
+                -156.6772461
+            ],
+            "resourceType": "water",
+            "locationName": "Citizen Church",
+            "zipCode": "96761",
+            "distance": 29418
+        },
+        "46": {
+            "id": "46",
+            "position": [
+                20.8165975,
+                -156.9273193
+            ],
+            "resourceType": "water",
+            "locationName": "Maui Economic Opportunity (MEO) Lanai",
+            "zipCode": "96761",
+            "distance": 26807
+        },
+        "47": {
+            "id": "47",
+            "position": [
+                20.9529323,
+                -156.5316222
+            ],
+            "resourceType": "water",
+            "locationName": "Waihe'e Protestant Church",
+            "zipCode": "96761",
+            "distance": 30639
+        },
+        "48": {
+            "id": "48",
+            "position": [
+                20.9266625,
+                -156.6771873
+            ],
+            "resourceType": "water",
+            "locationName": "Maui Ministry on the Move ",
+            "zipCode": "96761",
+            "distance": 7924
+        },
+        "49": {
+            "id": "49",
+            "position": [
+                20.8776318,
+                -156.6762686
+            ],
+            "resourceType": "water",
+            "locationName": "King's Chapel Pantry",
+            "zipCode": "96732",
+            "distance": 31260
+        },
+        "50": {
+            "id": "50",
+            "position": [
+                21.1636736,
+                -157.0704484
+            ],
+            "resourceType": "water",
+            "locationName": "Molokai Baptist Church",
+            "zipCode": "96729",
+            "distance": 8398
+        },
+        "51": {
+            "id": "51",
+            "position": [
+                21.0886472,
+                -157.0127412
+            ],
+            "resourceType": "water",
+            "locationName": "Maui Economic Opportunity (MEO) Molokai",
+            "zipCode": "96748",
+            "distance": 11275
+        },
+        "52": {
+            "id": "52",
+            "position": [
+                21.0860191,
+                -157.0192094
+            ],
+            "resourceType": "water",
+            "locationName": "Molokai Community Health Center",
+            "zipCode": "96748",
+            "distance": 10647
+        },
+        "53": {
+            "id": "53",
+            "position": [
+                21.0911111,
+                -157.02
+            ],
+            "resourceType": "water",
+            "locationName": "St. Damien of Molokai Parish",
+            "zipCode": "96748",
+            "distance": 44228
+        },
+        "54": {
+            "id": "54",
+            "position": [
+                20.7983626,
+                -156.3319253
+            ],
+            "resourceType": "water",
+            "locationName": "Salvation Army Homeless Outreach",
+            "zipCode": "96731",
+            "distance": 34785
+        },
+        "55": {
+            "id": "55",
+            "position": [
+                20.821339,
+                -156.329367
+            ],
+            "resourceType": "water",
+            "locationName": "Grace Church",
+            "zipCode": "96768",
+            "distance": 34359
+        },
+        "56": {
+            "id": "56",
+            "position": [
+                20.8367885,
+                -156.3442753
+            ],
+            "resourceType": "water",
+            "locationName": "LDS Pukalani/Makawao Ward",
+            "zipCode": "96768",
+            "distance": 34530
+        },
+        "57": {
+            "id": "57",
+            "position": [
+                20.8558692,
+                -156.3086499
+            ],
+            "resourceType": "water",
+            "locationName": "St. Joseph Church",
+            "zipCode": "96768",
+            "distance": 36072
+        },
+        "58": {
+            "id": "58",
+            "position": [
+                20.8869433,
+                -156.5048344
+            ],
+            "resourceType": "shelter",
+            "locationName": "Kahale A Ke Ola Resource Center - Wailuku",
+            "zipCode": "96793",
+            "distance": 37259
+        },
+        "59": {
+            "id": "59",
+            "position": [
+                20.882371,
+                -156.6816195
+            ],
+            "resourceType": "shelter",
+            "locationName": "Kahale A Ke Ola Resource Center - Lahaina",
+            "zipCode": "96793",
+            "distance": 94273
+        },
+        "60": {
+            "id": "60",
+            "position": [
+                20.8879307,
+                -156.5004269
+            ],
+            "resourceType": "shelter",
+            "locationName": "Women Helping Women",
+            "zipCode": "96793",
+            "distance": 86116
+        },
+        "61": {
+            "id": "61",
+            "position": [
+                20.8733133,
+                -156.4628632
+            ],
+            "resourceType": "shelter",
+            "locationName": "Ho'olanani",
+            "zipCode": "96732",
+            "distance": 102149
+        },
+        "62": {
+            "id": "62",
+            "position": [
+                20.8855207,
+                -156.4788968
+            ],
+            "resourceType": "shelter",
+            "locationName": "Malama Family Recovery Center",
+            "zipCode": "96732",
+            "distance": 23283
+        },
+        "63": {
+            "id": "63",
+            "position": [
+                20.7012721,
+                -156.357225
+            ],
+            "resourceType": "shelter",
+            "locationName": "Kula Hospital",
+            "zipCode": "96790",
+            "distance": 14055
+        },
+        "64": {
+            "id": "64",
+            "position": [
+                20.7757133,
+                -156.3249522
+            ],
+            "resourceType": "shelter",
+            "locationName": "The Pulehu Chapel",
+            "zipCode": "96790",
+            "distance": 9072
+        },
+        "65": {
+            "id": "65",
+            "position": [
+                20.7767841,
+                -156.3262068
+            ],
+            "resourceType": "shelter",
+            "locationName": "Kula Hardware and Nursery",
+            "zipCode": "96790",
+            "distance": 39810
+        },
+        "66": {
+            "id": "66",
+            "position": [
+                20.8965815,
+                -156.3037716
+            ],
+            "resourceType": "shelter",
+            "locationName": "Bamboo Valley Inn",
+            "zipCode": "96708",
+            "distance": 45061
+        },
+        "67": {
+            "id": "67",
+            "position": [
+                20.9160527,
+                -156.2830016
+            ],
+            "resourceType": "shelter",
+            "locationName": "Adventure in Paradise",
+            "zipCode": "96708",
+            "distance": 41136
+        },
+        "68": {
+            "id": "68",
+            "position": [
+                20.9239144,
+                -156.2706953
+            ],
+            "resourceType": "shelter",
+            "locationName": "Holomakai Northshore B and B",
+            "zipCode": "96708",
+            "distance": 32600
+        },
+        "69": {
+            "id": "69",
+            "position": [
+                20.7409709,
+                -155.986228
+            ],
+            "resourceType": "shelter",
+            "locationName": "Hana Paradise Cottages",
+            "zipCode": "96713",
+            "distance": 32600
+        },
+        "70": {
+            "id": "70",
+            "position": [
+                20.637522,
+                -156.1119692
+            ],
+            "resourceType": "shelter",
+            "locationName": "Huialoha Church",
+            "zipCode": "96713",
+            "distance": 29948
+        },
+        "71": {
+            "id": "71",
+            "position": [
+                20.6863858,
+                -156.016838
+            ],
+            "resourceType": "shelter",
+            "locationName": "Koali Ranch Cottage",
+            "zipCode": "96713",
+            "distance": 36836
+        },
+        "72": {
+            "id": "72",
+            "position": [
+                20.682899,
+                -156.438746
+            ],
+            "resourceType": "shelter",
+            "locationName": "Ho'olei at Grand Wailea",
+            "zipCode": "96753",
+            "distance": 17221
+        },
+        "73": {
+            "id": "73",
+            "position": [
+                20.7528259,
+                -156.4485271
+            ],
+            "resourceType": "shelter",
+            "locationName": "Safeway",
+            "zipCode": "96753",
+            "distance": 17708
+        },
+        "74": {
+            "id": "74",
+            "position": [
+                20.785578,
+                -156.4672113
+            ],
+            "resourceType": "shelter",
+            "locationName": "Sugar Beach Resort",
+            "zipCode": "96753",
+            "distance": 12802
+        },
+        "75": {
+            "id": "75",
+            "position": [
+                20.9587009,
+                -156.6844978
+            ],
+            "resourceType": "shelter",
+            "locationName": "Hale Ono Loa ",
+            "zipCode": "96761",
+            "distance": 7924
+        },
+        "76": {
+            "id": "76",
+            "position": [
+                20.9962986,
+                -156.6641297
+            ],
+            "resourceType": "shelter",
+            "locationName": "The Gardens at West Maui",
+            "zipCode": "96761",
+            "distance": 31260
+        },
+        "77": {
+            "id": "77",
+            "position": [
+                20.9687172,
+                -156.6799464
+            ],
+            "resourceType": "shelter",
+            "locationName": "Kahana Villa ",
+            "zipCode": "96761",
+            "distance": 8398
+        },
+        "78": {
+            "id": "78",
+            "position": [
+                21.152902,
+                -157.0360256
+            ],
+            "resourceType": "shelter",
+            "locationName": "Molokai Arts Center",
+            "zipCode": "96729",
+            "distance": 11275
+        },
+        "79": {
+            "id": "79",
+            "position": [
+                21.15596,
+                -157.0372924
+            ],
+            "resourceType": "shelter",
+            "locationName": "Kualapuu Recreational Center",
+            "zipCode": "96729",
+            "distance": 10647
+        },
+        "80": {
+            "id": "80",
+            "position": [
+                21.1602128,
+                -157.0100814
+            ],
+            "resourceType": "shelter",
+            "locationName": "Molokai Museum and Cultural Center",
+            "zipCode": "96729",
+            "distance": 44228
+        },
+        "81": {
+            "id": "81",
+            "position": [
+                21.0940998,
+                -157.0173717
+            ],
+            "resourceType": "shelter",
+            "locationName": "Molokai General Hospital",
+            "zipCode": "96748",
+            "distance": 34785
+        },
+        "82": {
+            "id": "82",
+            "position": [
+                21.0811729,
+                -157.003601
+            ],
+            "resourceType": "shelter",
+            "locationName": "Moloka'i Shores",
+            "zipCode": "96748",
+            "distance": 34359
+        },
+        "83": {
+            "id": "83",
+            "position": [
+                21.1170913,
+                -156.8320207
+            ],
+            "resourceType": "shelter",
+            "locationName": "Hotel Moloka'i",
+            "zipCode": "96748",
+            "distance": 34530
+        },
+        "84": {
+            "id": "84",
+            "position": [
+                20.7983626,
+                -156.3319253
+            ],
+            "resourceType": "shelter",
+            "locationName": "Church of Jesus Christ of Latter Day Saints",
+            "zipCode": "96731",
+            "distance": 36072
+        },
+        "85": {
+            "id": "85",
+            "position": [
+                20.7983626,
+                -156.3319253
+            ],
+            "resourceType": "shelter",
+            "locationName": "Kahuku High and Intermediate School",
+            "zipCode": "96731",
+            "distance": 37259
+        },
+        "86": {
+            "id": "86",
+            "position": [
+                20.7983626,
+                -156.3319253
+            ],
+            "resourceType": "shelter",
+            "locationName": "Kahuku Police Station",
+            "zipCode": "96731",
+            "distance": 94273
+        },
+        "87": {
+            "id": "87",
+            "position": [
+                20.8192962,
+                -156.3390188
+            ],
+            "resourceType": "shelter",
+            "locationName": "Kamehameha Middle School",
+            "zipCode": "96768",
+            "distance": 86116
+        },
+        "88": {
+            "id": "88",
+            "position": [
+                20.82105,
+                -156.3395293
+            ],
+            "resourceType": "shelter",
+            "locationName": "Kamehameha Elementary School",
+            "zipCode": "96768",
+            "distance": 102149
+        },
+        "89": {
+            "id": "89",
+            "position": [
+                20.8419812,
+                -156.3452098
+            ],
+            "resourceType": "shelter",
+            "locationName": "Pulukani Community Church of the Nazarene",
+            "zipCode": "96768",
+            "distance": 23283
+        },
+        "90": {
+            "id": "90",
+            "position": [
+                20.8776194,
+                -156.570016
+            ],
+            "resourceType": "medicine",
+            "locationName": "FEMA Support",
+            "zipCode": "96793",
+            "distance": 14055
+        },
+        "91": {
+            "id": "91",
+            "position": [
+                20.8882869,
+                -156.4654934
+            ],
+            "resourceType": "medicine",
+            "locationName": "Walgreens",
+            "zipCode": "96732",
+            "distance": 9072
+        },
+        "92": {
+            "id": "92",
+            "position": [
+                20.7012721,
+                -156.357225
+            ],
+            "resourceType": "medicine",
+            "locationName": "Kula Hospital",
+            "zipCode": "96790",
+            "distance": 39810
+        },
+        "93": {
+            "id": "93",
+            "position": [
+                20.9239144,
+                -156.2706953
+            ],
+            "resourceType": "medicine",
+            "locationName": "Holomakai Northshore B and B",
+            "zipCode": "96708",
+            "distance": 45061
+        },
+        "94": {
+            "id": "94",
+            "position": [
+                20.637522,
+                -156.1119692
+            ],
+            "resourceType": "medicine",
+            "locationName": "Huialoha Church",
+            "zipCode": "96713",
+            "distance": 41136
+        },
+        "95": {
+            "id": "95",
+            "position": [
+                20.682899,
+                -156.438746
+            ],
+            "resourceType": "medicine",
+            "locationName": "Ho'olei at Grand Wailea",
+            "zipCode": "96753",
+            "distance": 32600
+        },
+        "96": {
+            "id": "96",
+            "position": [
+                20.9050016,
+                -156.6838128
+            ],
+            "resourceType": "medicine",
+            "locationName": "Lahaina Civic Center",
+            "zipCode": "96761",
+            "distance": 32600
+        },
+        "97": {
+            "id": "97",
+            "position": [
+                21.15596,
+                -157.0372924
+            ],
+            "resourceType": "medicine",
+            "locationName": "Kualapuu Recreational Center",
+            "zipCode": "96729",
+            "distance": 29948
+        },
+        "98": {
+            "id": "98",
+            "position": [
+                21.0940998,
+                -157.0173717
+            ],
+            "resourceType": "medicine",
+            "locationName": "Molokai General Hospital",
+            "zipCode": "96748",
+            "distance": 36836
+        },
+        "99": {
+            "id": "99",
+            "position": [
+                20.7983626,
+                -156.3319253
+            ],
+            "resourceType": "medicine",
+            "locationName": "Church of Jesus Christ of Latter Day Saints",
+            "zipCode": "96731",
+            "distance": 17221
+        },
+        "100": {
+            "id": "100",
+            "position": [
+                20.82105,
+                -156.3395293
+            ],
+            "resourceType": "medicine",
+            "locationName": "Kamehameha Elementary School",
+            "zipCode": "96768",
+            "distance": 17708
+        }
+    },
+    "hazards": {
+        "1": {
+            "id": "1",
+            "center": [
+                20.855006,
+                -156.503536
+            ],
+            "radius": 25,
+            "hazardType": "fire"
+        },
+        "2": {
+            "id": "2",
+            "center": [
+
+            ],
+            "radius": 10,
+            "hazardType": "electricline"
+        }
+    }
+}
