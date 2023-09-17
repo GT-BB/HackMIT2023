@@ -166,10 +166,11 @@ class CoordinateParser(Parser):
             specificHarzardData = hazards[keys]
             center = specificHarzardData["center"]
             radius = specificHarzardData["radius"]
+            radiusBuffer = 0.05
             print (center)
             print (radius)
 
-            circle = Point(center).buffer(radius, resolution=32)
+            circle = Point(center).buffer(radius+radiusBuffer, resolution=32)
             self.hazardCircles.append(circle)
 
         hazard = self.hazardCircles[0]
