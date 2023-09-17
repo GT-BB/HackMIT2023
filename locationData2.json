@@ -43,5 +43,15 @@
             "threatType": "dsb",
             "locationName": "asds"
         }
+    },
+    "hazards": {
+        "1": {
+            "id": "1",
+            "center": [
+
+            ],
+            "radius": 25,
+            "hazardType": "fire"
+        }
     }
 }
