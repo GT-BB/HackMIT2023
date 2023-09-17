@@ -77,7 +77,7 @@ class ZipCodeParser(Parser):
 
         defaultName = "resource"
         index = 0
-        returnDict = {}
+        returnDict = []
 
         zipCode = self.currentLocation
 
@@ -89,7 +89,7 @@ class ZipCodeParser(Parser):
             resource = placeLocation["resourceType"]
 
             if (zipCode == dictZipCode and resource == resourceType):
-                returnDict[finalName] = placeLocation
+                returnDict.append(placeLocation)
                 index += 1
 
         return returnDict
