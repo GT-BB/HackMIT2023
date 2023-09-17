@@ -52,12 +52,19 @@ def get_resources(zip_code, resources, number):
 
 def get_directions(coords, number, resource):
     parser = CoordinateParser(coords, True)
-    steps = parser.getDirections(resource)
+    path = parser.getDirections(resource)
+    steps = path[0]
+    hazard = path[1]
 
     direction_msg = " Directions to nearest " + resource + ":\n"
     for i in range(len(steps)):
         direction_msg += (str(i+1) + ": " + steps[i] + "\n")
+
+    if hazard:
+        direction_msg += ("\nRouting around known hazard:\n")
+        direction_msg += (str(hazard['hazardType'].lower().capitalize()) + " located at " + str(hazard['center']))
     sendMessage(number, direction_msg)
+
 
 @app.route('/sms', methods=['POST'])
 def sms():
@@ -76,7 +83,7 @@ def sms():
     for token in message_tokens:
         if token.lower() == "help":
             setUp(number)
-            return
+            return(str(message_body))
         
         # Find if coordinate
         token = token.replace(",", "")
@@ -93,13 +100,13 @@ def sms():
     
     if zip_code == None and not directions:
         usage_error(number)
-        return
+        return(str(message_body))
 
     if directions:
         coords = (float(message_tokens[0]), float(message_tokens[1]))
 
         get_directions(coords, number, resources[0])
-        return
+        return(str(message_body))
 
     get_resources(zip_code, resources, number)
 
