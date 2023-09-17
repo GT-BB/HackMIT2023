@@ -13,7 +13,7 @@ class Parser():
         self.dangerLocations = None
         self.jsonContent = None
 
-        self.path = "locationData.json"
+        self.path = "locationData2.json"
 
         self.file = open(self.path, "r")
         self.jsonContent = json.load(self.file)
@@ -68,29 +68,29 @@ class ZipCodeParser(Parser):
 
     def __init__(self, location=None):
 
-        super.__init__(location)
+        super().__init__(location)
 
-    def getData(self, zipCode, resourceType):
+    def getData(self, resourceType):
 
         data = self.jsonContent
-        resource = data["resources"]
+        resources = data["resources"]
 
         defaultName = "resource"
         index = 0
         returnDict = {}
 
-        for key in resource:
+        zipCode = self.currentLocation
 
+        for key in resources:
             finalName = defaultName + str(index)
 
-            placeLocation = resource[key]
+            placeLocation = resources[key]
             dictZipCode = placeLocation["zipCode"]
             resource = placeLocation["resourceType"]
 
             if (zipCode == dictZipCode and resource == resourceType):
                 returnDict[finalName] = placeLocation
-
-            index += 1
+                index += 1
 
         return returnDict
 
@@ -98,7 +98,7 @@ class CoordinateParser(Parser):
 
     def __init__(self, location=None):
 
-        super.__init__(location)
+        super().__init__(location)
 
     def getDirections(self):
 
@@ -121,8 +121,8 @@ class CoordinateParser(Parser):
 
     def getClosestLocation(self):
 
-        data = self.getJSONData()
-        data = data["resources"]
+        wild = self.getJSONData()
+        data = wild["resources"]
 
         distanceLocations = []
 
@@ -162,7 +162,8 @@ class CoordinateParser(Parser):
 
         return distance
 
-
+name = ZipCodeParser("96729")
+print(name.getData("food"))
 
 
 
