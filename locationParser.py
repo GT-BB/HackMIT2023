@@ -1,6 +1,7 @@
 import json
 import googlemaps
 import math
+import re
 
 class Parser():
 
@@ -99,12 +100,44 @@ class CoordinateParser(Parser):
 
         super.__init__(location)
 
-    def getDistanceAlongRoads(self):
+    def getDirections(self):
+
+        closestObject = self.getClosestLocation()
+        destination = closestObject["position"]
+
+        directionsResult = self.gmaps.directions(
+            self.currentLocation,
+            destination,
+            mode="driving"
+        )
+
+        steps = []
+        for step in directionsResult[0]["legs"][0]["steps"]:
+            line = steps.append[step["html_instructions"]]
+            output_string = re.sub(r'<[^>]*>', '', line)
+            steps.append(output_string)
+
+        return steps
+
+    def getClosestLocation(self):
 
         data = self.getJSONData()
+        data = data["resources"]
 
+        distanceLocations = []
 
+        for keys in data:
+            placeLocation = data[keys]
+            coords = placeLocation["position"]
 
+            distance = self.haverSineDistanceCorrection(self.currentLocation, coords)
+            distanceLocations.append(distance)
+
+        closestDistanceIndex = distanceLocations.find(min(distanceLocations))
+
+        closestObject = data[data.keys(closestDistanceIndex)]
+
+        return closestObject
 
     def haverSineDistanceCorrection(self, origin, destination):
         # Radius of the Earth in kilometers
@@ -129,15 +162,6 @@ class CoordinateParser(Parser):
 
         return distance
 
-
-
-
-
-
-
-
-newObj = Parser(48, False)
-newObj.addDataPoint(True, 23, "dsb", "asds")
 
 
 
