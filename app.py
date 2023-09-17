@@ -2,10 +2,12 @@
 # Download the twilio-python library from twilio.com/docs/libraries/python
 import os
 from twilio.rest import Client
-from locationParser import ZipCodeParser
+from locationParser import ZipCodeParser, CoordinateParser
 from flask import Flask, request
 import twilio
+import json
 
+locationDataFile = "locationData2.json"
 
 ACCOUNT_SID = "ACa26b69ce1d979d57ea33832cced5be93" #  AC76017154f49ee9f08fd11087be5d3b2d
 AUTH_TOKEN = "f006b982847714fd19871ef5eaaf7392" #  bd67711513540e92649af42bd24f15c0
@@ -27,6 +29,8 @@ def setUp(number):
     # Send set-up message
     setUpMsg = "Enter your zip code, followed by the resource(s) you are interested in. \nResources available: \nfood, water, shelter, or medical."
     sendMessage(number, setUpMsg)
+    direction_directions = "For directions to the nearest resource, enter your location coordinates (can be found in Google Maps offline), the resource you wish to get to, and the word 'directions'."
+    sendMessage(number, direction_directions)
     print("Set up complete")
 
 def usage_error(number):
@@ -42,19 +46,31 @@ def get_resources(zip_code, resources, number):
         resource_name = resource_wanted.lower().capitalize()
         resource_msg = resource_name + ":\n"
         resource_list = parser.getData(resource_wanted)
-        print(resource_list)
         for resource in resource_list:
             resource_msg += ("-> " + resource['locationName'] + "\n")
         sendMessage(number, resource_msg)
 
+def get_directions(coords, number, resource):
+    parser = CoordinateParser(coords, True)
+    steps = parser.getDirections(resource)
+
+    direction_msg = " Directions to nearest " + resource + ":\n"
+    for i in range(len(steps)):
+        direction_msg += (str(i+1) + ": " + steps[i] + "\n")
+    sendMessage(number, direction_msg)
 
 @app.route('/sms', methods=['POST'])
 def sms():
     number = request.form['From']
     message_body = request.form['Body']
 
+    message_body = message_body.replace(",", "")
+    message_body = message_body.replace("(", "")
+    message_body = message_body.replace(")", "")
+
     message_tokens = message_body.split()
     zip_code = None
+    directions = False
     resources = []
 
     for token in message_tokens:
@@ -62,19 +78,41 @@ def sms():
             setUp(number)
             return
         
+        # Find if coordinate
+        token = token.replace(",", "")
+
+        
         if token.isdigit() and len(token) == 5:
             zip_code = token
 
         if token in AVAIL_RESOURCES:
             resources.append(token)
+        
+        if token.lower() == "directions":
+            directions = True
     
-    if zip_code == None:
+    if zip_code == None and not directions:
         usage_error(number)
+        return
+
+    if directions:
+        coords = (float(message_tokens[0]), float(message_tokens[1]))
+
+        get_directions(coords, number, resources[0])
+        return
 
     get_resources(zip_code, resources, number)
 
     return(str(message_body))
 
+@app.route('/', methods = ['POST'])
+def post():
+    request_data = request.get_json()
+
+    locationData = json.load(locationDataFile)
+    
+
+    
 
 if __name__ == '__main__':
     app.run()
