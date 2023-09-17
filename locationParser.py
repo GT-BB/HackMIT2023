@@ -113,14 +113,14 @@ class CoordinateParser(Parser):
         super().__init__(location)
         self.truthMode = truth
 
-    def getDirections(self):
+    def getDirections(self, resourceType):
 
         directionResult = None
 
         if (self.truthMode == False):
-            directionResult = self.falseGetDirections()
+            directionResult = self.falseGetDirections(resourceType)
         else:
-            directionResult = self.getClosestLocation()
+            directionResult = self.getClosestLocation(resourceType)
 
         steps = []
         for step in directionResult[0]["legs"][0]["steps"]:
@@ -132,7 +132,12 @@ class CoordinateParser(Parser):
 
         return steps
 
-    def getClosestLocation(self):
+    """
+        {"resources", "id, position, resouceType"}
+    """
+
+
+    def getClosestLocation(self, resourceType):
 
         wild = self.getJSONData()
         data = wild["resources"]
@@ -140,7 +145,18 @@ class CoordinateParser(Parser):
         distanceLocations = []
         distanceValues = []
 
+        index = 0
+        specializedData = {}
+
         for keys in data:
+            placeLocation = data[keys]
+            gotResource = placeLocation["resourceType"]
+
+            if (resourceType == gotResource):
+                specializedData[str(index)] = placeLocation
+                index += 1
+
+        for keys in specializedData:
             placeLocation = data[keys]
             coords = placeLocation["position"]
 
@@ -162,7 +178,8 @@ class CoordinateParser(Parser):
         closestDistanceIndex = distanceValues.index(min(distanceValues))
         closestRoute = distanceLocations[closestDistanceIndex]
 
-        print (distanceValues)
+
+        #print (distanceValues)
 
         return closestRoute
 
@@ -205,8 +222,8 @@ UNTIL YOU GUYS START DEMOING USE FALSE MODE ON THE COORDINATE PARSER
 
 """
 
-blue = CoordinateParser((20.841327942643264, -156.51442769100743), False)
-print(blue.getDirections())
+blue = CoordinateParser((20.841327942643264, -156.51442769100743), True)
+print(blue.getDirections("food"))
 
 
 
