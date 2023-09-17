@@ -27,7 +27,7 @@ def sendMessage(number, message):
 
 def setUp(number):
     # Send set-up message
-    setUpMsg = "Enter your zip code, followed by the resource(s) you are interested in. \nResources available: \nfood, water, shelter, or medical."
+    setUpMsg = "Enter your zip code, and list resources you are interested in, type 'all' for all resources. \nResources available: \nfood, water, shelter, medical"
     sendMessage(number, setUpMsg)
     direction_directions = "For directions to the nearest resource, enter your location coordinates (can be found in Google Maps offline), the resource you wish to get to, and the word 'directions'."
     sendMessage(number, direction_directions)
@@ -52,12 +52,19 @@ def get_resources(zip_code, resources, number):
 
 def get_directions(coords, number, resource):
     parser = CoordinateParser(coords, True)
-    steps = parser.getDirections(resource)
+    path = parser.getDirections(resource)
+    steps = path[0]
+    hazard = path[1]
 
     direction_msg = " Directions to nearest " + resource + ":\n"
     for i in range(len(steps)):
         direction_msg += (str(i+1) + ": " + steps[i] + "\n")
+
+    if hazard:
+        direction_msg += ("\nRouting around known hazard:\n")
+        direction_msg += (str(hazard['hazardType'].lower().capitalize()) + " located at " + str(hazard['center']))
     sendMessage(number, direction_msg)
+
 
 @app.route('/sms', methods=['POST'])
 def sms():
@@ -76,7 +83,7 @@ def sms():
     for token in message_tokens:
         if token.lower() == "help":
             setUp(number)
-            return
+            return(str(message_body))
         
         # Find if coordinate
         token = token.replace(",", "")
@@ -87,22 +94,28 @@ def sms():
 
         if token in AVAIL_RESOURCES:
             resources.append(token)
+
+        if token.lower() == "all":
+            resources = AVAIL_RESOURCES
         
         if token.lower() == "directions":
             directions = True
     
     if zip_code == None and not directions:
         usage_error(number)
-        return
+        return(str(message_body))
 
     if directions:
         coords = (float(message_tokens[0]), float(message_tokens[1]))
 
         get_directions(coords, number, resources[0])
-        return
+        return(str(message_body))
 
-    get_resources(zip_code, resources, number)
+    if zip_code and len(resources) != 0:
+        get_resources(zip_code, resources, number)
+        return(str(message_body))
 
+    usage_error(number)
     return(str(message_body))
 
 @app.route('/', methods = ['POST'])

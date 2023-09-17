@@ -171,7 +171,7 @@ class CoordinateParser(Parser):
             print (center)
             print (radius)
 
-            circle = Point(center).buffer(radius + radiusBuffer, resolution=32)
+            circle = Point(center).buffer(radius+radiusBuffer, resolution=32)
             self.hazardCircles.append(circle)
 
         hazard = self.hazardCircles[0]
@@ -192,7 +192,7 @@ class CoordinateParser(Parser):
                 index += 1
 
         for keys in specializedData:
-            placeLocation = data[keys]
+            placeLocation = specializedData[keys]
             coords = placeLocation["position"]
 
             distanceResult = self.gmaps.directions(
@@ -344,16 +344,5 @@ UNTIL YOU GUYS START DEMOING USE FALSE MODE ON THE COORDINATE PARSER
 
 
 """
-
 blue = CoordinateParser((20.8684, -156.49523), True)
 print(blue.getDirections("food"))
-
-
-
-
-
-
-
-
-
-
