@@ -287,7 +287,31 @@ class CoordinateParser(Parser):
             testPoint = Point(coords[0], coords[1])
 
             if (testPoint.within(selectedHazard)):
-                return hazards[key]
+                x = hazards[key]
+                direction = self.detectCardinalDirection(coords(0), coords(1))
+                x["cardinal"] = direction
+                return x
+
+    def detectCardinalDirection(self, hazlat, hazlong):
+        poslong = self.currentLocation[0]
+        poslat = self.currentLocation[1]
+
+        delta_lat = hazlat - poslat
+        delta_lon = hazlong - poslat
+
+        if abs(delta_lat) < 0.001 and abs(delta_lon) < 0.001:
+            return "No movement"
+
+        if abs(delta_lat) > abs(delta_lon):
+            if delta_lat > 0:
+                return "North"
+            else:
+                return "South"
+        else:
+            if delta_lon > 0:
+                return "East"
+            else:
+                return "West"
 
     def falseGetDirections(self):
 
