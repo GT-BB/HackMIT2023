@@ -27,7 +27,7 @@ def sendMessage(number, message):
 
 def setUp(number):
     # Send set-up message
-    setUpMsg = "Enter your zip code, followed by the resource(s) you are interested in. \nResources available: \nfood, water, shelter, or medical."
+    setUpMsg = "Enter your zip code, and list resources you are interested in, type 'all' for all resources. \nResources available: \nfood, water, shelter, medical"
     sendMessage(number, setUpMsg)
     direction_directions = "For directions to the nearest resource, enter your location coordinates (can be found in Google Maps offline), the resource you wish to get to, and the word 'directions'."
     sendMessage(number, direction_directions)
@@ -94,6 +94,9 @@ def sms():
 
         if token in AVAIL_RESOURCES:
             resources.append(token)
+
+        if token.lower() == "all":
+            resources = AVAIL_RESOURCES
         
         if token.lower() == "directions":
             directions = True
