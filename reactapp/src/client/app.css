@@ -137,7 +137,7 @@ ul {
 }
 
 p {
-  font-size: 15px;
+  font-size: 20px;
   line-height: 30px;
   color: #2a2a2a;
 }
@@ -321,6 +321,7 @@ header
 
 .logo h4 span {
   color: #fb8888;
+  /* size: 50px; */
 }
 
 .background-header .main-nav .logo h4 {
@@ -853,7 +854,7 @@ Banner Style
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 226px 0px 120px 0px;
+  padding: 100px 0px 50px 0px;
   position: relative;
   overflow: hidden;
 }
@@ -1099,14 +1100,14 @@ Portfolio
 */
 
 .our-portfolio {
-  padding-top: 120px;
+  padding-top: 0px;
   margin-top: 0px;
 }
 
 .our-portfolio .section-heading h2 {
   text-align: center;
   margin: 0px 90px 0px 90px;
-  margin-bottom: 120px;
+  margin-bottom: 0px;
   position: relative;
   z-index: 1;
 }
@@ -1593,4 +1594,23 @@ responsive
   .phone-info h4 span i {
     margin-left: 0px;
   }
+}
+
+#mybutton {
+  border-radius: 7px;
+  margin-top: -5px;
+  margin-left: 3%;
+  padding: 2%;
+  width: 100%;
+  font-weight: bold;
+  background-color: #fb8888;
+  color: white;
+  outline: white;
+}
+
+#mybutton:hover {
+  background-color: white;
+  color: #fb8888;
+  outline: #fb8888;
+  cursor: pointer;
 }

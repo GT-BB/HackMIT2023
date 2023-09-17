@@ -3,7 +3,8 @@ import './app.css';
 import TeamImage from './media/hackgt.png';
 import BannerLeft from './media/baner-dec-left.png';
 import BannerRight from './media/baner-dec-right.png';
-import T2V from './media/T2V_logo.png'; 
+import GTLogo from './media/gt-logo.png'; 
+import LightHouse from './media/lighthouse.png'; 
 
 export default () => {
 
@@ -16,18 +17,22 @@ export default () => {
                   <div style={{ display: "flex", flexDirection: "row", marginLeft: "10%", marginRight: '10%'}}>
                     <div style={{width: "50%", padding: "2%"}}>
                       <div class="section-heading">
-                        <h2>GT bB <em> (Georgia Tech bubbleBees)</em></h2><br/>
-                        <p>We are just a group of friends who wanted to have our MinneHack project be one with an impact. We will tell you with first hand experience that the upper floors of Coffman Union are among the best places to grind out some code.</p><br/>
+                        <h2>GT bB <span> (Georgia Tech bubbleBees)</span></h2><br/>
+                        <p>We are just a group of friends who wanted to have our HackMIT project be one with an impact. We will tell you with first hand experience that the fifth floor of the Stud is one of the best places to grind out some code.</p><br/><br></br>
                 
-                          <p>From the beginning, our team was driven to create an application to further improve the quality of life and accessibility of daily services, and ultimately increase civic participation in Minnesota and the nation as a whole. </p><br/>
-                
-                          <p>Every fall, hundreds of people line up outside polling locations on Election Day-- just to cast their ballot and have an opportunity to have their voice heard. In light of recent voting laws and restrictions across the United States, especially in marginalized communities, our team came to the realization that the long and unpredictable lines at the polls is the main reason voters are discouraged from making the trip to the polls.</p><br/>
+                          <p>From the beginning, our team was driven to create a service to connect natural disaster victims to nearby available resources provided by relief organizations.
+               
+                          During natural disasters, many individuals and communities find themselves in desperate need of assistance, without a reliable Internet connection.  People require essential resources such as food, clean water, shelter, and medical supplies to survive. These resources not only address basic human needs but also play a pivotal role in restoring a sense of safety and stability, ultimately facilitating recovery and saving lives.<br></br><br></br>
+                        The ability to seek help and stay informed is severely limited.  Without online resources, people and communities may struggle to access critical information, connect with emergency services, or communicate their needs to relief organizations, highlighting the crucial importance of alternative widely-available communication channels, such as SMS, in these challenging situations.  
+                        <br></br><br></br>
+                        The recent Maui wildfires were particularly challenging for people without Internet access. Without this vital source of information and communication, it became extremely difficult for affected individuals to search for help, access, or connect with relief organizations, further exacerbating the challenges of managing and recovering from such a disaster.
+                        <br></br><br></br>
+                        LifeLine is a service that provides this essential line of communication.  It connects these individuals and communities over SMS to nearby available resources.   During a natural disaster, relief organizations can submit a resource to the LifeLine database.  People located nearby can search this database for resources they need, such as food, water, shelter, or medical assistance.  LifeLine will respond with a list of available resources, providing a set of walking directions navigating from their current location to the provided resource.
+                        <br></br><br></br>
+                        Lifeline ultimately restores a sense of safety and stability, facilitates recovery, and enables individuals and communities to rebuild their lives in the face of adversity.
+                        </p><br></br><br></br>
 
-                          <p><b>TIME2VOTE is an application which provides Minnesota residents with real-time updates and information on polling location wait times, facilitating voting in local, state, and national elections.  TIME2VOTE aims to increase and encourage voter participation in elections by helping voters plan when it’s time to vote and make the trip to the polls.</b></p><br/>
-
-                          <p><b>Using computer vision to determine current poll traffic, TIME2VOTE enables voters to plan more effectively on Election Day, empowering them to use their voice and VOTE.</b></p><br/>
-
-                          <p>GT bB is made up of four first-year engineering students who attend the Georgia Institute of Technology. Three of the members are proud to call Minnesota their home.</p>
+                          <p>GT bB is made up of four second-year engineering students who attend the Georgia Institute of Technology.</p>
 
                   
                       </div>
@@ -35,7 +40,8 @@ export default () => {
                     <div style={{width: "50%", padding: "2%"}}>
                       <div class="right-image wow fadeInRight" >
                         <img src={TeamImage} alt="react" style={{ borderRadius: 20}} />
-                        <img src={T2V} alt="react" style={{padding: "30%"}}/>  
+                        <img src={GTLogo} alt="react" style={{padding: "10%"}}/>  
+                        {/* <img src={LightHouse} alt="react" style={{paddingLeft: "30%", paddingRight: "30%"}}/>   */}
                       </div>
                     </div>
                   </div>
@@ -45,4 +51,5 @@ export default () => {
           </div>
         </div>
     )
+
   }
