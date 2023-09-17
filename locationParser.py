@@ -6,6 +6,7 @@ import geopandas
 from geopandas.geoseries import *
 from shapely import Point, Polygon, LineString
 from shapely.ops import transform
+import polyline
 
 """
 
@@ -241,19 +242,11 @@ class CoordinateParser(Parser):
             conflict = False
             path = None
 
-            for step in route[0]["legs"][0]["steps"]:
-                start_location = step['start_location']
-                end_location = step['end_location']
-
-                # Extract latitude and longitude
-                start_lat = start_location['lat']
-                start_lng = start_location['lng']
-                end_lat = end_location['lat']
-                end_lng = end_location['lng']
-
-                coordinates.append((start_lat, start_lng))
-                coordinates.append((end_lat, end_lng))
-
+            newpolyline = route[0]['overview_polyline']['points']
+            decodedPolyline = polyline.decode(newpolyline)
+            print ()
+            print (decodedPolyline)
+            print ()
             path = LineString(coordinates)
 
             for harzard in self.hazardCircles:
@@ -352,7 +345,7 @@ UNTIL YOU GUYS START DEMOING USE FALSE MODE ON THE COORDINATE PARSER
 
 """
 
-blue = CoordinateParser((20.8302, -156.50679), True)
+blue = CoordinateParser((20.8684, -156.49523), True)
 print(blue.getDirections("food"))
 
 
