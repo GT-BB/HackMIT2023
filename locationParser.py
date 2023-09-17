@@ -147,7 +147,7 @@ class CoordinateParser(Parser):
             distanceResult = self.gmaps.directions(
                 self.currentLocation,
                 coords,
-                mode="driving",
+                mode="walking",
                 units="imperial"
             )
 
@@ -182,11 +182,12 @@ class CoordinateParser(Parser):
         coords = resources[str(closestDistanceIndex)]["position"]
         distance = resources[str(closestDistanceIndex)]["distance"]
         print (distance)
+        print (coords)
 
         distanceResult = self.gmaps.directions(
                 self.currentLocation,
                 coords,
-                mode="driving",
+                mode="walking",
                 units="imperial"
             )
 
