@@ -314,7 +314,7 @@
                 20.7983626,
                 -156.3319253
             ],
-            "resourceType": "shelter",
+            "resourceType": "medical",
             "locationName": "Church of Jesus Christ of Latter Day Saints",
             "zipCode": "96731",
             "distance": 36072
@@ -325,7 +325,7 @@
                 20.7983626,
                 -156.3319253
             ],
-            "resourceType": "shelter",
+            "resourceType": "water",
             "locationName": "Kahuku High and Intermediate School",
             "zipCode": "96731",
             "distance": 37259
