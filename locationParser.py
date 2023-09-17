@@ -35,22 +35,23 @@ class Parser():
     def updateCurrentLocation(self, locationCoords):
         self.currentLocation = locationCoords
 
-    def addDataPoint(self, isThreat, position, newType, name, zipCode):
+    def addDataPoint(self, isThreat, position=None, newType=None, name=None, radius=None, center=None, distance=None):
 
         data = None
         finalValue = None
 
         if (isThreat):
-            data = self.jsonContent["threats"]
+            data = self.jsonContent["hazard"]
 
             keysList = list(data.keys())
             finalValue = int(keysList[-1])
             finalValue += 1
             data["threat" + str(finalValue)] = {
                                                   "position": position,
-                                                  "threatType": newType,
-                                                  "locationName": name,
-                                                  "zipCode": zipCode
+                                                  "hazardType": newType,
+                                                  "hazardName": name,
+                                                  "center": center,
+                                                  "radius": radius
                                                 }
             self.jsonContent["threats"] = data
 
@@ -60,11 +61,11 @@ class Parser():
             finalValue = int(keysList[-1])
             finalValue += 1
 
-            data["threat" + str(finalValue)] = {
+            data[str(finalValue)] = {
                                                   "position": position,
                                                   "resourceType": newType,
                                                   "locationName": name,
-                                                  "zipCode": zipCode
+                                                  "zipCode": zipCode,
                                                 }
 
             self.jsonContent["resources"] = data
@@ -141,6 +142,7 @@ class CoordinateParser(Parser):
 
         wild = self.getJSONData()
         data = wild["resources"]
+        hazards = wild["hazards"]
 
         distanceLocations = []
         distanceValues = []

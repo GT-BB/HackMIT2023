@@ -1120,7 +1120,8 @@
                 -156.503536
             ],
             "radius": 25,
-            "hazardType": "fire"
+            "hazardType": "fire",
+            "hazardName": ""
         }
     }
 }
