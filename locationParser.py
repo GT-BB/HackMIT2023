@@ -166,10 +166,11 @@ class CoordinateParser(Parser):
             specificHarzardData = hazards[keys]
             center = specificHarzardData["center"]
             radius = specificHarzardData["radius"]
+            radiusBuffer = 0.05
             print (center)
             print (radius)
 
-            circle = Point(center).buffer(radius, resolution=32)
+            circle = Point(center).buffer(radius + radiusBuffer, resolution=32)
             self.hazardCircles.append(circle)
 
         hazard = self.hazardCircles[0]
@@ -351,7 +352,7 @@ UNTIL YOU GUYS START DEMOING USE FALSE MODE ON THE COORDINATE PARSER
 
 """
 
-blue = CoordinateParser((20.846895275708786, -156.5055077097432), True)
+blue = CoordinateParser((20.8302, -156.50679), True)
 print(blue.getDirections("food"))
 
 
