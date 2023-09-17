@@ -1111,5 +1111,15 @@
             "zipCode": "96768",
             "distance": 17708
         }
+    },
+    "hazards": {
+        "1": {
+            "id": "1",
+            "center": [
+
+            ],
+            "radius": 25,
+            "hazardType": "fire"
+        }
     }
 }
