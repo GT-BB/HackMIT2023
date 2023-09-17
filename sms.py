@@ -42,7 +42,6 @@ def get_resources(zip_code, resources, number):
         resource_name = resource_wanted.lower().capitalize()
         resource_msg = resource_name + ":\n"
         resource_list = parser.getData(resource_wanted)
-        print(resource_list)
         for resource in resource_list:
             resource_msg += ("-> " + resource['locationName'] + "\n")
         sendMessage(number, resource_msg)
