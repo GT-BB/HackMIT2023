@@ -996,7 +996,7 @@
                 20.8776194,
                 -156.570016
             ],
-            "resourceType": "medicine",
+            "resourceType": "medical",
             "locationName": "FEMA Support",
             "zipCode": "96793",
             "distance": 14055
@@ -1007,7 +1007,7 @@
                 20.8882869,
                 -156.4654934
             ],
-            "resourceType": "medicine",
+            "resourceType": "medical",
             "locationName": "Walgreens",
             "zipCode": "96732",
             "distance": 9072
@@ -1018,7 +1018,7 @@
                 20.7012721,
                 -156.357225
             ],
-            "resourceType": "medicine",
+            "resourceType": "medical",
             "locationName": "Kula Hospital",
             "zipCode": "96790",
             "distance": 39810
@@ -1029,7 +1029,7 @@
                 20.9239144,
                 -156.2706953
             ],
-            "resourceType": "medicine",
+            "resourceType": "medical",
             "locationName": "Holomakai Northshore B and B",
             "zipCode": "96708",
             "distance": 45061
@@ -1040,7 +1040,7 @@
                 20.637522,
                 -156.1119692
             ],
-            "resourceType": "medicine",
+            "resourceType": "medical",
             "locationName": "Huialoha Church",
             "zipCode": "96713",
             "distance": 41136
@@ -1051,7 +1051,7 @@
                 20.682899,
                 -156.438746
             ],
-            "resourceType": "medicine",
+            "resourceType": "medical",
             "locationName": "Ho'olei at Grand Wailea",
             "zipCode": "96753",
             "distance": 32600
@@ -1062,7 +1062,7 @@
                 20.9050016,
                 -156.6838128
             ],
-            "resourceType": "medicine",
+            "resourceType": "medical",
             "locationName": "Lahaina Civic Center",
             "zipCode": "96761",
             "distance": 32600
@@ -1073,7 +1073,7 @@
                 21.15596,
                 -157.0372924
             ],
-            "resourceType": "medicine",
+            "resourceType": "medical",
             "locationName": "Kualapuu Recreational Center",
             "zipCode": "96729",
             "distance": 29948
@@ -1084,7 +1084,7 @@
                 21.0940998,
                 -157.0173717
             ],
-            "resourceType": "medicine",
+            "resourceType": "medical",
             "locationName": "Molokai General Hospital",
             "zipCode": "96748",
             "distance": 36836
@@ -1095,7 +1095,7 @@
                 20.7983626,
                 -156.3319253
             ],
-            "resourceType": "medicine",
+            "resourceType": "medical",
             "locationName": "Church of Jesus Christ of Latter Day Saints",
             "zipCode": "96731",
             "distance": 17221
@@ -1106,7 +1106,7 @@
                 20.82105,
                 -156.3395293
             ],
-            "resourceType": "medicine",
+            "resourceType": "medical",
             "locationName": "Kamehameha Elementary School",
             "zipCode": "96768",
             "distance": 17708
@@ -1121,14 +1121,6 @@
             ],
             "radius": 25,
             "hazardType": "fire"
-        },
-        "2": {
-            "id": "2",
-            "center": [
-
-            ],
-            "radius": 10,
-            "hazardType": "electricline"
         }
     }
 }
