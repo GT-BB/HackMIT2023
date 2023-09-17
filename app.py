@@ -108,8 +108,11 @@ def sms():
         get_directions(coords, number, resources[0])
         return(str(message_body))
 
-    get_resources(zip_code, resources, number)
+    if zip_code and len(resources) != 0:
+        get_resources(zip_code, resources, number)
+        return(str(message_body))
 
+    usage_error(number)
     return(str(message_body))
 
 @app.route('/', methods = ['POST'])

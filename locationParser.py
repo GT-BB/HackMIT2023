@@ -190,7 +190,7 @@ class CoordinateParser(Parser):
                 index += 1
 
         for keys in specializedData:
-            placeLocation = data[keys]
+            placeLocation = specializedData[keys]
             coords = placeLocation["position"]
 
             distanceResult = self.gmaps.directions(
