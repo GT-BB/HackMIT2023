@@ -1,1 +1,4 @@
-output.py
+.twilio
+__pycache__
+locationData.json
+locationData2.json
