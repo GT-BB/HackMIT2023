@@ -419,6 +419,16 @@
             "radius": 0.05,
             "hazardType": "fire",
             "hazardName": ""
+        },
+        "2": {
+            "id": "2",
+            "center": [
+                20.555006,
+                -156.203536
+            ],
+            "radius": 0.04,
+            "hazardType": "fire",
+            "hazardName": ""
         }
     }
 }

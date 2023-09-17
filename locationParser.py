@@ -352,5 +352,5 @@ UNTIL YOU GUYS START DEMOING USE FALSE MODE ON THE COORDINATE PARSER
 
 """
 
-blue = CoordinateParser((20.846895275708786, -156.5055077097432), True)
+blue = CoordinateParser((20.8302, -156.50679), True)
 print(blue.getDirections("food"))
