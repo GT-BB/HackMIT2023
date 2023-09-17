@@ -3,6 +3,18 @@ import googlemaps
 import math
 import re
 
+"""
+
+
+
+
+UNTIL YOU GUYS START DEMOING USE FALSE MODE ON THE COORDINATE PARSER
+
+
+
+
+"""
+
 class Parser():
 
     def __init__(self, location=None):
@@ -96,26 +108,27 @@ class ZipCodeParser(Parser):
 
 class CoordinateParser(Parser):
 
-    def __init__(self, location=None):
+    def __init__(self, location=None, truth=False):
 
         super().__init__(location)
+        self.truthMode = truth
 
     def getDirections(self):
 
-        closestObject = self.getClosestLocation()
-        destination = closestObject["position"]
+        directionResult = None
 
-        directionsResult = self.gmaps.directions(
-            self.currentLocation,
-            destination,
-            mode="driving"
-        )
+        if (self.truthMode == False):
+            directionResult = self.falseGetDirections()
+        else:
+            directionResult = self.getClosestLocation()
 
         steps = []
-        for step in directionsResult[0]["legs"][0]["steps"]:
-            line = steps.append[step["html_instructions"]]
+        for step in directionResult[0]["legs"][0]["steps"]:
+            line = step["html_instructions"]
+            distance_value = step["distance"]["value"]
             output_string = re.sub(r'<[^>]*>', '', line)
-            steps.append(output_string)
+            result = re.sub(r'([a-z])([A-Z])', r'\1 \2', output_string)
+            steps.append(result + ": " + str(round(distance_value/5280, 2)) + " miles.")
 
         return steps
 
@@ -125,45 +138,74 @@ class CoordinateParser(Parser):
         data = wild["resources"]
 
         distanceLocations = []
+        distanceValues = []
 
         for keys in data:
             placeLocation = data[keys]
             coords = placeLocation["position"]
 
-            distance = self.haverSineDistanceCorrection(self.currentLocation, coords)
-            distanceLocations.append(distance)
+            distanceResult = self.gmaps.directions(
+                self.currentLocation,
+                coords,
+                mode="driving",
+                units="imperial"
+            )
 
-        closestDistanceIndex = distanceLocations.find(min(distanceLocations))
+            if distanceResult == []:
+                continue
 
-        closestObject = data[data.keys(closestDistanceIndex)]
+            distanceValue = int(distanceResult[0]['legs'][0]['distance']['value'])
 
-        return closestObject
+            distanceLocations.append(distanceResult)
+            distanceValues.append(distanceValue)
 
-    def haverSineDistanceCorrection(self, origin, destination):
-        # Radius of the Earth in kilometers
-        R = 6371.0
+        closestDistanceIndex = distanceValues.index(min(distanceValues))
+        closestRoute = distanceLocations[closestDistanceIndex]
 
-        # Convert latitude and longitude from degrees to radians
-        lat1 = math.radians(origin[0])
-        lon1 = math.radians(origin[1])
-        lat2 = math.radians(destination[0])
-        lon2 = math.radians(destination[1])
+        print (distanceValues)
 
-        # Differences between coordinates
-        dlat = lat2 - lat1
-        dlon = lon2 - lon1
+        return closestRoute
 
-        # Haversine formula
-        a = math.sin(dlat / 2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2)**2
-        c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    def falseGetDirections(self):
 
-        # Calculate the distance
-        distance = R * c
+        data = self.getJSONData()
+        resources = data["resources"]
 
-        return distance
+        distances = []
 
-name = ZipCodeParser("96729")
-print(name.getData("food"))
+        for keys in resources:
+            placeLocation = resources[keys]
+            distance = placeLocation["distance"]
+            distances.append(distance)
+
+        closestDistanceIndex = distances.index(min(distances))
+        coords = resources[str(closestDistanceIndex)]["position"]
+        distance = resources[str(closestDistanceIndex)]["distance"]
+        print (distance)
+
+        distanceResult = self.gmaps.directions(
+                self.currentLocation,
+                coords,
+                mode="driving",
+                units="imperial"
+            )
+
+        return distanceResult
+
+"""
+
+
+
+
+UNTIL YOU GUYS START DEMOING USE FALSE MODE ON THE COORDINATE PARSER
+
+
+
+
+"""
+
+blue = CoordinateParser((20.841327942643264, -156.51442769100743), False)
+print(blue.getDirections())
 
 
 
