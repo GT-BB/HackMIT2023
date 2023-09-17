@@ -264,7 +264,6 @@ class CoordinateParser(Parser):
 
                 if (conflict == False):
                     distance = self.distanceToTravel2(route)
-                    print (distance)
                     finalRoutes[distance] = route
 
         print (count)
@@ -288,7 +287,7 @@ class CoordinateParser(Parser):
 
             if (testPoint.within(selectedHazard)):
                 x = hazards[key]
-                direction = self.detectCardinalDirection(coords(0), coords(1))
+                direction = self.detectCardinalDirection(coords[0], coords[1])
                 x["cardinal"] = direction
                 return x
 
@@ -297,7 +296,7 @@ class CoordinateParser(Parser):
         poslat = self.currentLocation[1]
 
         delta_lat = hazlat - poslat
-        delta_lon = hazlong - poslat
+        delta_lon = hazlong - poslong
 
         if abs(delta_lat) < 0.001 and abs(delta_lon) < 0.001:
             return "No movement"
