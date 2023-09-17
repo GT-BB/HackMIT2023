@@ -1120,7 +1120,14 @@
             ],
             "radius": 25,
             "hazardType": "fire"
-        }
+        },
+        "2": {
+            "id": "2",
+            "center": [
 
+            ],
+            "radius": 10,
+            "hazardType": "electricline"
+        }
     }
 }
